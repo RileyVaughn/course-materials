@@ -1,1 +1,4 @@
-go test
+1) The code scans all ports 1-1024 to see if they are open
+2) I've added a slice to store the closedPorts, and updated the 'results' channel to be of type '[]int' instead of int.
+   results[0] stores what amounts to a boolean (open or closed), and results[1] stores the port number. I output the open ports first, then the closed ports.
+   I've also added an additional test case to test soley for closed ports.
