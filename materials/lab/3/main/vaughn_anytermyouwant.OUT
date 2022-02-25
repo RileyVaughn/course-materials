@@ -1,0 +1,29 @@
+Query Credits: 199999
+Scan Credits:  65536
+
+Host Data Dump
+==== start  199.88.131.19 ====
+{"os":"","timestamp":"2022-02-18T20:17:16.618451","isp":"Laramie County Government","asn":"AS399386","hostnames":[],"location":{"city":"Cheyenne","region_code":"WY","area_code":0,"longitude":-104.7962,"country_code3":"","country_name":"United States","postal_code":"","dma_code":0,"country_code":"US","latitude":41.1437},"ip":3344466707,"domains":[],"org":"Laramie County Government","data":"CheckPoint:\n  Firewall Host: REV-Laramie\n  SmartCenter Host: ITD-BORDER","port":264,"ip_str":"199.88.131.19"}
+==== end  199.88.131.19 ====
+==== start  111.248.111.134 ====
+{"os":"","timestamp":"2022-02-17T06:12:09.150390","isp":"Data Communication Business Group","asn":"AS3462","hostnames":["111-248-111-134.dynamic-ip.hinet.net"],"location":{"city":"Banqiao","region_code":"TPE","area_code":0,"longitude":121.46719,"country_code3":"","country_name":"Taiwan","postal_code":"","dma_code":0,"country_code":"TW","latitude":25.01427},"ip":1878552454,"domains":["hinet.net"],"org":"Chunghwa Telecom Co.,Ltd.","data":"RFB 003.008\nAuthentication Disabled\n\n\nJ\na 2\nls pat (LC) Ra ))\nsoa) -O ASQ IAD Re HE\n434)\nDL: 7.0 kBfsec UL: 10.4 kBfsec\nos rats -\n8g LARAMIE -\nSIT Nt yy VE PL I 02H17H 21 14:12:22","port":5900,"ip_str":"111.248.111.134"}
+==== end  111.248.111.134 ====
+==== start  198.140.239.1 ====
+{"os":"","timestamp":"2022-02-12T15:20:48.151137","isp":"Osceola County","asn":"AS32481","hostnames":[],"location":{"city":"Kissimmee","region_code":"FL","area_code":0,"longitude":-81.41667,"country_code3":"","country_name":"United States","postal_code":"","dma_code":0,"country_code":"US","latitude":28.30468},"ip":3331124993,"domains":[],"org":"","data":"CheckPoint:\n  Firewall Host: Laramie\n  SmartCenter Host: galt.osceola.org","port":264,"ip_str":"198.140.239.1"}
+==== end  198.140.239.1 ====
+==== start  98.127.198.110 ====
+{"os":"","timestamp":"2022-02-10T15:03:32.800969","isp":"Charter Communications","asn":"AS33588","hostnames":["098-127-198-110.biz.spectrum.com"],"location":{"city":"Gillette","region_code":"WY","area_code":0,"longitude":-105.5492,"country_code3":"","country_name":"United States","postal_code":"","dma_code":0,"country_code":"US","latitude":43.9282},"ip":1652541038,"domains":["spectrum.com"],"org":"Charter Communications","data":"\u0001\r\nI20100\r\n02/10/22  8:02 AM\r\n\r\nBig D #37\r\n920 E Laramie St\r\nGillette WY 82716\r\n\r\n\r\nIN-TANK INVENTORY\r\n\r\nTANK PRODUCT               VOLUME TC-VOLUME   ULLAGE   HEIGHT    WATER    TEMP\r\n  1  Regular Unleaded        5557      5587     4343    58.11     0.00   52.25\r\n  2  Premium Unleaded        1903      1902     2142    50.53     0.00   60.55\r\n  3  Diesel                  3992      4014     3860    53.70     0.00   47.43\r\n\r\n\u0003","port":10001,"ip_str":"98.127.198.110"}
+==== end  98.127.198.110 ====
+==== start  128.177.100.51 ====
+{"os":"","timestamp":"2022-02-09T20:04:10.128008","isp":"Zayo Bandwidth","asn":"AS6461","hostnames":["128.177.100.51.IPYX-080654-ZYO.zip.zayo.com"],"location":{"city":"Denver","region_code":"CO","area_code":0,"longitude":-104.9847,"country_code3":"","country_name":"United States","postal_code":"","dma_code":0,"country_code":"US","latitude":39.73915},"ip":2159109171,"domains":["zayo.com"],"org":"Action Communications","data":"Firmware: 1\nHostname: USFS Laramie\nVendor: MikroTik","port":1723,"ip_str":"128.177.100.51"}
+==== end  128.177.100.51 ====
+==== start  134.2.87.118 ====
+{"os":"","timestamp":"2022-01-28T15:09:33.967200","isp":"Universitaet Stuttgart","asn":"AS553","hostnames":["u-087-c118.eap.uni-tuebingen.de"],"location":{"city":"Tübingen","region_code":"BW","area_code":0,"longitude":9.05222,"country_code3":"","country_name":"Germany","postal_code":"","dma_code":0,"country_code":"DE","latitude":48.52266},"ip":2248300406,"domains":["uni-tuebingen.de"],"org":"Eberhard Karls Universitaet Tuebingen","data":"Name: Laramie","port":3283,"ip_str":"134.2.87.118"}
+==== end  134.2.87.118 ====
+IP, Port
+199.88.131.19, 264
+111.248.111.134, 5900
+198.140.239.1, 264
+98.127.198.110, 10001
+128.177.100.51, 1723
+134.2.87.118, 3283

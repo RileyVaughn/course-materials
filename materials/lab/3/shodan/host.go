@@ -41,9 +41,9 @@ type HostSearch struct {
 	Matches []Host `json:"matches"`
 }
 
-func (s *Client) HostSearch(q string) (*HostSearch, error) {
+func (s *Client) HostSearch(q string, minify string) (*HostSearch, error) {
 	res, err := http.Get(
-		fmt.Sprintf("%s/shodan/host/search?key=%s&query=%s", BaseURL, s.apiKey, q),
+		fmt.Sprintf("%s/shodan/host/search?key=%s&query=%s&minify=%s", BaseURL, s.apiKey, q, minify),
 	)
 	if err != nil {
 		return nil, err

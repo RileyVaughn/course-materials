@@ -6,15 +6,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
-	"encoding/json"
 	"shodan/shodan"
 )
 
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) != 3 {
 		log.Fatalln("Usage: main <searchterm>")
 	}
 	apiKey := os.Getenv("SHODAN_API_KEY")
@@ -28,27 +28,25 @@ func main() {
 		info.QueryCredits,
 		info.ScanCredits)
 
-	hostSearch, err := s.HostSearch(os.Args[1])
+	hostSearch, err := s.HostSearch(os.Args[1], os.Args[2])
 	if err != nil {
 		log.Panicln(err)
 	}
 
 	fmt.Printf("Host Data Dump\n")
 	for _, host := range hostSearch.Matches {
-		fmt.Println("==== start ",host.IPString,"====")
-		h,_ := json.Marshal(host)
+		fmt.Println("==== start ", host.IPString, "====")
+		h, _ := json.Marshal(host)
 		fmt.Println(string(h))
-		fmt.Println("==== end ",host.IPString,"====")
+		fmt.Println("==== end ", host.IPString, "====")
 		//fmt.Println("Press the Enter Key to continue.")
 		//fmt.Scanln()
 	}
-
 
 	fmt.Printf("IP, Port\n")
 
 	for _, host := range hostSearch.Matches {
 		fmt.Printf("%s, %d\n", host.IPString, host.Port)
 	}
-
 
 }
