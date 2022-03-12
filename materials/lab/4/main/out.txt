@@ -1,0 +1,63 @@
+
+## API Test
+API is up and running
+
+
+## GetAssignments Test
+{
+    "assignments": [
+        {
+            "id": "Mike1A",
+            "Title": "Lab 4 ",
+            "desc": "Some lab this guy made yesteday?",
+            "points": 20
+        }
+    ]
+}
+
+##Get Assignment test
+{
+    "id": "Mike1A",
+    "Title": "Lab 4 ",
+    "desc": "Some lab this guy made yesteday?",
+    "points": 20
+}
+
+##CreateAssignment + GetAssignments test
+{"status":"Success"}
+
+{
+    "assignments": [
+        {
+            "id": "Mike1A",
+            "Title": "Lab 4 ",
+            "desc": "Some lab this guy made yesteday?",
+            "points": 20
+        },
+        {
+            "id": "TestID",
+            "Title": "",
+            "desc": "",
+            "points": 0
+        }
+    ]
+}
+
+##UpdateAssignment + GetAssignments test
+
+{
+    "assignments": [
+        {
+            "id": "Mike1A",
+            "Title": "Lab 4 ",
+            "desc": "Some lab this guy made yesteday?",
+            "points": 20
+        },
+        {
+            "id": "TestID",
+            "Title": "Test Title",
+            "desc": "This is a Test",
+            "points": 100
+        }
+    ]
+}
