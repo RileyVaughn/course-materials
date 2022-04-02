@@ -19,10 +19,14 @@ var LOG_LEVEL int = 0
 
 func main() {
 
-	log.Println("starting API server")
+	if LOG_LEVEL > 0 {
+		log.Println("starting API server")
+	}
 	//create a new router
 	router := mux.NewRouter()
-	log.Println("creating routes")
+	if LOG_LEVEL > 0 {
+		log.Println("creating routes")
+	}
 	//specify endpoints
 	router.HandleFunc("/", scrape.MainPage).Methods("GET")
 

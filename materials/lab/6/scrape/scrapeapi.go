@@ -49,7 +49,9 @@ func walkFn(w http.ResponseWriter) filepath.WalkFunc {
 
 				}
 
-				log.Printf("[+] HIT: %s\n", path)
+				if LOGLEVEL > 1 {
+					log.Printf("[+] HIT: %s\n", path)
+				}
 
 			}
 
@@ -90,7 +92,9 @@ func walkFn2(w http.ResponseWriter, query string) filepath.WalkFunc {
 
 			}
 
-			log.Printf("[+] HIT: %s\n", path)
+			if LOGLEVEL > 1 {
+				log.Printf("[+] HIT: %s\n", path)
+			}
 
 		}
 
@@ -103,7 +107,9 @@ func walkFn2(w http.ResponseWriter, query string) filepath.WalkFunc {
 
 func APISTATUS(w http.ResponseWriter, r *http.Request) {
 
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 0 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{ "status" : "API is up and running ",`))
@@ -121,7 +127,9 @@ func APISTATUS(w http.ResponseWriter, r *http.Request) {
 }
 
 func MainPage(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 1 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "text/html")
 
 	w.WriteHeader(http.StatusOK)
@@ -136,7 +144,9 @@ func FindFile(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	if ok && len(q[0]) > 0 {
-		log.Printf("Entering search with query=%s", q[0])
+		if LOGLEVEL > 1 {
+			log.Printf("Entering search with query=%s", q[0])
+		}
 
 		// ADVANCED: Create a function in scrape.go that returns a list of file locations; call and use the result here
 		// e.g., func finder(query string) []string { ... }
@@ -160,7 +170,9 @@ func FindFile(w http.ResponseWriter, r *http.Request) {
 }
 
 func IndexFiles(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 0 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "application/json")
 
 	location, locOK := r.URL.Query()["location"]
@@ -209,7 +221,9 @@ func IndexFiles(w http.ResponseWriter, r *http.Request) {
 //TODO_12 create endpoint that calls resetRegEx AND *** clears the current Files found; ***
 //TODO_12 Make sure to connect the name of your function back to the reset endpoint main.go!
 func Reset(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 0 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "application/json")
 	resetRegEx()
 	Files = nil
@@ -218,7 +232,9 @@ func Reset(w http.ResponseWriter, r *http.Request) {
 //TODO_13 create endpoint that calls clearRegEx ;
 //TODO_12 Make sure to connect the name of your function back to the clear endpoint main.go!
 func Clear(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 0 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "application/json")
 	clearRegEx()
 
@@ -233,7 +249,9 @@ func Clear(w http.ResponseWriter, r *http.Request) {
 // Suggestion : prepend (?i) to the search query in this endpoint
 
 func AddRegex(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Entering %s end point", r.URL.Path)
+	if LOGLEVEL > 0 {
+		log.Printf("Entering %s end point", r.URL.Path)
+	}
 	w.Header().Set("Content-Type", "application/json")
 	clearRegEx()
 

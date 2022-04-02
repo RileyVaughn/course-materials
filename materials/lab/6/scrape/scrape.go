@@ -17,6 +17,8 @@ type FileInfo struct {
 	Location string `json:"location"`
 }
 
+var LOGLEVEL int
+
 var Files []FileInfo
 var numFiles int64 = 0
 
@@ -59,4 +61,8 @@ func contains(s []FileInfo, e FileInfo) bool {
 		}
 	}
 	return false
+}
+
+func SetLogLevel(level int) {
+	LOGLEVEL = level
 }
